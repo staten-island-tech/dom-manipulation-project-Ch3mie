@@ -1,6 +1,8 @@
 const Domselectors = {
   h1: document.querySelector("title"),
   button: document.querySelector("button"),
+  input: document.querySelector("#input"),
+  value: document.querySelector("text"),
 };
 
 function stealSSN() {
@@ -12,3 +14,9 @@ function stealSSN() {
   });
 }
 stealSSN();
+
+Domselectors.button.addEventListener("click", function (event) {
+  let input = Domselectors.input.text;
+  Domselectors.box.insertedAdjacentHTML("afterend", <p>${input}</p>);
+  event.preventDefault();
+});
