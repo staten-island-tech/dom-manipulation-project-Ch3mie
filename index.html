@@ -9,8 +9,8 @@
   <body>
     <h1>Welcome to SSN Stealer</h1>
     <h2>Input your SSN:</h2>
-    <form action="">
-      <input type="text" id="input" />
+    <form id="stealer">
+      <input type="text" id="input" onclick="reset()" />
       <button style="submit">Submit</button>
     </form>
     <ul>
@@ -18,6 +18,10 @@
       <li>Kaden Peng - 2691729390</li>
       <li>Chu Yang Zhang - 091736482</li>
     </ul>
-    <script src="index.js"></script>
+    <div class="container"></div>
+    <script src="index.js">
+      function reset(){
+      document.getElementById("stealer").reset();}
+    </script>
   </body>
 </html>

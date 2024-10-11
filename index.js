@@ -3,12 +3,16 @@ const Domselectors = {
   button: document.querySelector("button"),
   input: document.querySelector("#input"),
   value: document.querySelector("text"),
+  container: document.querySelector(".container"),
 };
 
-Domselectors.button.addEventListener("click", function (happen) {
-  let input = Domselectors.input.text;
-  Domselectors.box.insertedAdjacentHTML("afterend", `<p>${input}</p>`);
-  happen.preventDefault();
+Domselectors.button.addEventListener("click", function (event) {
+  event.preventDefault();
+  let input = Domselectors.input.value;
+  Domselectors.container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="box"><p>${input}</p></div>`
+  );
 });
 
 //function stealSSN() {

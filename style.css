@@ -9,9 +9,26 @@ h1 {
     text-align: center;
 }
 
-#box {
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box {
     width: 20rem;
     height: 20rem;
     border: 0.5rem solid white;
     background-color: pink;
+    border-radius: 9px;
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    box-shadow: 10px 5px 5px rgb(255, 181, 239);
+    transition: 0.2s;
 }
