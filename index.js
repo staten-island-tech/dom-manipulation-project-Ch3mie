@@ -2,7 +2,7 @@ const Domselectors = {
   h1: document.querySelector("title"),
   button: document.querySelector("button"),
   input: document.querySelector("#input"),
-  value: document.querySelector("text"),
+  value: document.querySelector("password"),
   container: document.querySelector(".container"),
 };
 
