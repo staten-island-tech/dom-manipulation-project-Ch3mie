@@ -5,18 +5,17 @@ const Domselectors = {
   value: document.querySelector("text"),
 };
 
-function stealSSN() {
-  let form = document.querySelector("form");
-  GamepadButton.addEven;
-  Domselectors.button.addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log(event.target);
-  });
-}
-stealSSN();
-
-Domselectors.button.addEventListener("click", function (event) {
+Domselectors.button.addEventListener("click", function (happen) {
   let input = Domselectors.input.text;
-  Domselectors.box.insertedAdjacentHTML("afterend", <p>${input}</p>);
-  event.preventDefault();
+  Domselectors.box.insertedAdjacentHTML("afterend", `<p>${input}</p>`);
+  happen.preventDefault();
 });
+
+//function stealSSN() {
+//let form = document.querySelector("form");
+//GamepadButton.addEven;
+//Domselectors.button.addEventListener("click", function (event) {
+//event.preventDefault();
+//console.log(event.target);
+//});
+//}
