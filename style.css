@@ -1,5 +1,21 @@
+body,
+html,
+*{
+    font-size: 1.2rem ;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+
+}
+
+
+
 body {
-    background: gray;
+    background: no-repeat top/100% url("https://minibackground.com/wp-content/uploads/2019/01/Ceprano-concrete.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -21,7 +37,7 @@ h1 {
     width: 20rem;
     height: 20rem;
     border: 0.5rem solid white;
-    background-color: pink;
+    background-color: lightgrey;
     border-radius: 9px;
     display: flex;
     margin: 2rem;
@@ -29,6 +45,28 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    box-shadow: 10px 5px 5px rgb(255, 181, 239);
+    box-shadow: 10px 5px 5px rgb(49, 47, 49);
     transition: 0.2s;
 }
+
+.inimage {
+    max-width: 80%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .card {
+        width: 40%;
+        
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+        .card {
+            width: 90%;
+            margin: 0.5rem; 
+        }
+    }
