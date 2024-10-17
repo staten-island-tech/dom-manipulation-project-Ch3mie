@@ -8,23 +8,21 @@ const Domselectors = {
   pics: document.querySelector("#pic"),
 };
 
-Domselectors.button.addEventListener("click", function (event) {
-  event.preventDefault();
-  let input = Domselectors.input.value;
-  let image = Domselectors.pics.value;
-  Domselectors.container.insertAdjacentHTML(
-    "beforeend",
-    `<div class="box"><p>${input}</p><img src="${image}" class="inimage" alt="e"></div>`
-  );
+function create() {
+  Domselectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let input = Domselectors.input.value;
+    let image = Domselectors.pics.value;
+    Domselectors.container.insertAdjacentHTML(
+      "beforeend",
+      `<div class="box"><p>${input}</p><img src="${image}" class="inimage" alt="e"></div>`
+    );
 
-  Domselectors.form.reset();
-});
+    Domselectors.form.reset();
+  });
+}
 
-//function stealSSN() {
-//let form = document.querySelector("form");
-//GamepadButton.addEven;
-//Domselectors.button.addEventListener("click", function (event) {
-//event.preventDefault();
-//console.log(event.target);
-//});
-//}
+create();
+
+const deleted = document.getElementsByClass("box");
+deleted.remove;
