@@ -1,4 +1,4 @@
-const Domselectors = {
+const DOMSelectors = {
   h1: document.querySelector("title"),
   button: document.querySelector("button"),
   input: document.querySelector("#input"),
@@ -8,21 +8,45 @@ const Domselectors = {
   pics: document.querySelector("#pic"),
 };
 
-function create() {
-  Domselectors.form.addEventListener("submit", function (event) {
+function createCard() {
+  DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
-    let input = Domselectors.input.value;
-    let image = Domselectors.pics.value;
-    Domselectors.container.insertAdjacentHTML(
-      "beforeend",
-      `<div class="box"><p>${input}</p><img src="${image}" class="inimage" alt="e"></div>`
-    );
-
-    Domselectors.form.reset();
+    const cardCount1 = DOMSelectors.card.length;
+    const cardCount = cardCount1 + 1;
+    const card = {
+      header: DOMSelectors.input.value,
+      image: DOMSelectors.pics.value,
+      id: cardCount,
+    };
+    return card;
   });
 }
 
-create();
+function addCard(card) {
+  DOMSelectors.container.addAdjacentHTML(
+    "beforeend",
+    `<div class="box" id="card${card.id}"><p>${card.header}</p><img src="${card.image}" class="inimage" alt="e"><button type="button" id="${card.id}"><button></button></div>`
+  );
+}
 
-const deleted = document.getElementsByClass("box");
-deleted.remove;
+function clearInputs() {
+  DOMSelectors.header.value = "";
+  DOMSelectors.image.value = "";
+  DOMSelectors.id.value = "";
+}
+
+function removeCard() {
+  const removeButtons = document.querySelectorAll();
+  removeButtons.forEach((el) =>
+    el.addEventListener("click", function (event) {
+      const buttonId = event.getAttribute("id");
+      const id = "card" + buttonId;
+      const card = document.getElementById(id);
+      card.remove();
+    })
+  );
+}
+const card = createCard();
+addCard(card);
+clearInputs();
+removeCard();
