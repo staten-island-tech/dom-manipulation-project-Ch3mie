@@ -7,6 +7,7 @@ html,
     margin: 0;
     padding: 0;
     text-align: center;
+    
 }
 
 
@@ -20,29 +21,29 @@ body {
 
 
 h1 {
-    font-size: 60px;
+    font-size: 3rem;
     text-align: center;
     color: white;
 }
 h2 {
-    font-size: 30px;
+    font-size: 1.5rem;
     text-align: center;
     color: white;
 }
 h3 {
-    font-size: 20px;
+    font-size: 1rem;
     text-align: center;
     color: white;
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 1.5rem;
     text-align: center;
     color: black;
 }
 
 p {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
     color: black;
 }
@@ -58,7 +59,7 @@ p {
 .box {
     width: 20rem;
     height: 20rem;
-    border: 0.5rem solid white;
+    border: 0.25rem solid white;
     background-color: lightgrey;
     border-radius: 9px;
     display: flex;
@@ -73,6 +74,12 @@ p {
 
 .inimage {
     max-width: 80%;
+    max-height: 50%;
+}
+
+.box:hover {
+    transform: scale(1) translateY(-10px);
+    transition: 0.5s;
 }
 
 
