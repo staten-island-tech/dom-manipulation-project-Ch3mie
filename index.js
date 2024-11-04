@@ -35,7 +35,7 @@ function addCard(card) {
        <button type="button" class="remove-button" id="${card.id}">Remove</button>
      </div>`
   );
-  removeCard(); 
+  removeCard();
 }
 
 function clearInputs() {
